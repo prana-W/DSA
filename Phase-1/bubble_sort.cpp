@@ -14,11 +14,27 @@ void print_arr (int arr_name[], const int size) {
     cout << endl;
 }
 
+//NOTE: This is an unoptimised version!!
 void bubbleSort (int arr[], int n) {
   for (int i = 1; i < n; i++) { //for round 1 to round (n-1)
     for (int j = 0; j < n-i; j++) {
       if (arr[j] > arr[j+1]) swap(arr[j], arr[j+1]);
     }
+  }
+}
+
+//Optimised version of Bubble sort
+void bubbleSortOptimised (int arr[], int n) {
+  for (int i = 1; i < n; i++) { //for round 1 to round (n-1)
+      bool swapped = false;
+    for (int j = 0; j < n-i; j++) {
+      if (arr[j] > arr[j+1]) {
+          swap(arr[j], arr[j+1]);
+          swapped = true;
+      }
+    }
+      //Before proceeding to next round, we check if the array is already sorted or not
+      if (swapped == false) break;
   }
 }
 
@@ -33,7 +49,10 @@ int main () {
     cout << "Array before sorting:" << endl;
     print_arr(num, size);
 
+    //Using unoptimised version (use bubbleSortOptimised (num, size) for the obtimised version)
     bubbleSort(num, size);
     cout << "Array after sorting (in ascending order):" << endl;
     print_arr(num, size);
+
+    return 0;
 }
