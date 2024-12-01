@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-//NOTE: Kindly pass a sorted array as an argument (since we are dealing with binary search)
+//NOTE: Kindly pass a sorted array as an argument (since we are dealing with binary search)...
 
 //To create an array
 void create_arr (int arr_name[], const int size) {
@@ -41,14 +41,14 @@ int main () {
 
   int arr [1000];
 
-  cout << "Enter the elements of the  array: << endl;
+  cout << "Enter the elements of the  array: "<< endl;
   create_arr(arr, size);
   print_arr(arr, size);
 
   cout << "Enter the target element";
   cin >> target;
 
-  cout "Index of the element is: " << binarySearch(arr, size, target) << endl;
+  cout << "Index of the element is: " << binarySearch(arr, size, target) << endl;
 
   return 0;
 }
