@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+//NOTE: Kindly pass a sorted array as an argument (since we are dealing with binary search)
+
 //To create an array
 void create_arr (int arr_name[], const int size) {
     for (int i = 0; i < size; i++) {
