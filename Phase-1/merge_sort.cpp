@@ -31,7 +31,7 @@ void merge (int arr1[], int m, int arr2[], int n, int arr3[]) {
 
     //Copying remaining elements of arr2[] if arr1[] is exhausted
     while (j < n) {
-        arr2[k++] = arr2[j++];
+        arr3[k++] = arr2[j++];
     }
 }
 
