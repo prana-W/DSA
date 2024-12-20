@@ -22,6 +22,8 @@ void insertionSort (int arr_name[], int n) {
 
         while (j>=0) {
             if (arr_name[j] > temp) {
+
+                //Shifting the arr[j] to the right, so as to place the space int the left for the arr[i] to be inserted
                 arr_name[j+1] = arr_name[j];
             }
             else break;
